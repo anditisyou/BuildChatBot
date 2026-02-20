@@ -1,0 +1,71 @@
+chatbot-platform/
+│
+├── compiler/
+│   ├── lexer.js
+│   ├── parser.js
+│   ├── semantic.js
+│   ├── ir.js
+│   └── runtime.js
+│
+├── storage/
+│   └── bots.json
+│
+├── public/
+│   └── widget.js
+│
+├── server.js
+├── package.json
+
+
+/project-root
+├── /src
+│   ├── /compiler
+│   │   ├── lexer.js
+│   │   ├── parser.js
+│   │   ├── semantic.js
+│   │   ├── ir.js
+│   │   └── index.js          # Compiler pipeline facade
+│   ├── /engine
+│   │   ├── runtime.js
+│   │   └── matcher.js         # Extracted matching logic
+│   ├── /storage
+│   │   ├── repository.js      # Storage abstraction
+│   │   └── cache.js           # Cache manager
+│   ├── /api
+│   │   ├── controllers/
+│   │   │   ├── compile.js
+│   │   │   ├── chat.js
+│   │   │   └── bot.js
+│   │   ├── middleware/
+│   │   │   ├── error.js
+│   │   │   ├── rateLimit.js
+│   │   │   └── validation.js
+│   │   └── routes.js
+│   ├── /errors
+│   │   ├── LexicalError.js
+│   │   ├── SyntaxError.js
+│   │   ├── SemanticError.js
+│   │   └── index.js
+│   └── server.js
+├── /public
+│   └── widget.js
+├── /storage
+│   └── bots.json
+├── package.json
+└── README.md
+Run using docker- 
+docker-compose up -d
+
+Verify the bot exists in storage:
+bash
+cat storage/bots.json | grep -A 10 bot_cbf92a8d_mlpffysd
+
+templates/
+├── education-bot.dsl
+├── ecommerce-bot.dsl
+├── saas-bot.dsl
+└── customer-support.dsl
+
+# Save your bot definitions in Git
+git add bots/support-bot.dsl
+git commit -m "Updated support bot responses"

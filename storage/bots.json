@@ -1,0 +1,1446 @@
+{
+  "bot_33c78ffd_mlpi6t2s": {
+    "bot_id": "bot_33c78ffd_mlpi6t2s",
+    "bot_name": "FashionStoreBot",
+    "metadata": {
+      "domain": "ecommerce",
+      "tone": "friendly",
+      "created_at": "2026-02-16T18:24:04.276Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to FashionHub! I'm here to help you find the perfect outfit. What are you looking for today?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Please try again.",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you.",
+        "5ac99513": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    }
+  },
+  "bot_b236c21c_mlpi8uv1": {
+    "bot_id": "bot_b236c21c_mlpi8uv1",
+    "bot_name": "FashionStoreBot",
+    "metadata": {
+      "domain": "ecommerce",
+      "tone": "friendly",
+      "created_at": "2026-02-16T18:25:39.901Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to FashionHub! I'm here to help you find the perfect outfit. What are you looking for today?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Please try again.",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you.",
+        "5ac99513": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    }
+  },
+  "bot_0c2b0a7c_mlpibvwj": {
+    "bot_id": "bot_0c2b0a7c_mlpibvwj",
+    "bot_name": "TechSupportBot",
+    "metadata": {
+      "domain": "saas",
+      "tone": "helpful",
+      "created_at": "2026-02-16T18:28:01.219Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to TechFlow Support!",
+    "intents": [
+      {
+        "id": "2a68085c",
+        "name": "help_password",
+        "keywords": [
+          "password",
+          "reset",
+          "forgot"
+        ],
+        "response": "Reset your password here: help.techflow.com/password"
+      },
+      {
+        "id": "d54572a5",
+        "name": "help_billing",
+        "keywords": [
+          "billing",
+          "invoice",
+          "payment",
+          "charge"
+        ],
+        "response": "View your billing at: account.techflow.com/billing"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "For more help, visit help.techflow.com",
+    "runtime": {
+      "keyword_index": {
+        "password": [
+          "2a68085c"
+        ],
+        "reset": [
+          "2a68085c"
+        ],
+        "forgot": [
+          "2a68085c"
+        ],
+        "billing": [
+          "d54572a5"
+        ],
+        "invoice": [
+          "d54572a5"
+        ],
+        "payment": [
+          "d54572a5"
+        ],
+        "charge": [
+          "d54572a5"
+        ]
+      },
+      "response_map": {
+        "2a68085c": "Reset your password here: help.techflow.com/password",
+        "d54572a5": "View your billing at: account.techflow.com/billing"
+      },
+      "trie": {
+        "p": {
+          "a": {
+            "s": {
+              "s": {
+                "w": {
+                  "o": {
+                    "r": {
+                      "d": {
+                        "_intent": "2a68085c"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "y": {
+              "m": {
+                "e": {
+                  "n": {
+                    "t": {
+                      "_intent": "d54572a5"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "r": {
+          "e": {
+            "s": {
+              "e": {
+                "t": {
+                  "_intent": "2a68085c"
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "o": {
+            "r": {
+              "g": {
+                "o": {
+                  "t": {
+                    "_intent": "2a68085c"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "b": {
+          "i": {
+            "l": {
+              "l": {
+                "i": {
+                  "n": {
+                    "g": {
+                      "_intent": "d54572a5"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "i": {
+          "n": {
+            "v": {
+              "o": {
+                "i": {
+                  "c": {
+                    "e": {
+                      "_intent": "d54572a5"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "g": {
+                  "e": {
+                    "_intent": "d54572a5"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 7
+      }
+    }
+  },
+  "bot_9b713855_mlpicej5": {
+    "bot_id": "bot_9b713855_mlpicej5",
+    "bot_name": "TechFlowSupportBot",
+    "metadata": {
+      "domain": "saas",
+      "tone": "helpful",
+      "created_at": "2026-02-16T18:28:25.361Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to TechFlow Support. How can I help?",
+    "intents": [
+      {
+        "id": "d2c33428",
+        "name": "reset_password",
+        "keywords": [
+          "password",
+          "reset",
+          "change",
+          "forgot",
+          "login"
+        ],
+        "response": "To reset your password: Go to login, click Forgot Password, check your email for reset link"
+      },
+      {
+        "id": "f6a575e1",
+        "name": "billing_inquiry",
+        "keywords": [
+          "bill",
+          "invoice",
+          "payment",
+          "subscription"
+        ],
+        "response": "View invoices at Account -> Billing. Update payment method in Account -> Payment Methods"
+      },
+      {
+        "id": "246c871d",
+        "name": "api_error",
+        "keywords": [
+          "error",
+          "api",
+          "failed",
+          "broken",
+          "issue"
+        ],
+        "response": "Check status at status.techflow.com. Verify your API key is active. Review error logs in dashboard"
+      },
+      {
+        "id": "ff535fa3",
+        "name": "help_setup",
+        "keywords": [
+          "setup",
+          "install",
+          "integrate",
+          "connect",
+          "configure"
+        ],
+        "response": "Go to Dashboard -> Integrations. Select your platform, authorize, configure webhooks, then test"
+      },
+      {
+        "id": "5895b67b",
+        "name": "pricing_plans",
+        "keywords": [
+          "pricing",
+          "plan",
+          "cost",
+          "price",
+          "upgrade",
+          "feature"
+        ],
+        "response": "Starter: $9/mo with 10k API calls. Pro: $49/mo with 100k calls. Enterprise: Custom pricing with unlimited calls"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I can't help with that. Visit help.techflow.com or email support@techflow.com",
+    "runtime": {
+      "keyword_index": {
+        "password": [
+          "d2c33428"
+        ],
+        "reset": [
+          "d2c33428"
+        ],
+        "change": [
+          "d2c33428"
+        ],
+        "forgot": [
+          "d2c33428"
+        ],
+        "login": [
+          "d2c33428"
+        ],
+        "bill": [
+          "f6a575e1"
+        ],
+        "invoice": [
+          "f6a575e1"
+        ],
+        "payment": [
+          "f6a575e1"
+        ],
+        "subscription": [
+          "f6a575e1"
+        ],
+        "error": [
+          "246c871d"
+        ],
+        "api": [
+          "246c871d"
+        ],
+        "failed": [
+          "246c871d"
+        ],
+        "broken": [
+          "246c871d"
+        ],
+        "issue": [
+          "246c871d"
+        ],
+        "setup": [
+          "ff535fa3"
+        ],
+        "install": [
+          "ff535fa3"
+        ],
+        "integrate": [
+          "ff535fa3"
+        ],
+        "connect": [
+          "ff535fa3"
+        ],
+        "configure": [
+          "ff535fa3"
+        ],
+        "pricing": [
+          "5895b67b"
+        ],
+        "plan": [
+          "5895b67b"
+        ],
+        "cost": [
+          "5895b67b"
+        ],
+        "price": [
+          "5895b67b"
+        ],
+        "upgrade": [
+          "5895b67b"
+        ],
+        "feature": [
+          "5895b67b"
+        ]
+      },
+      "response_map": {
+        "d2c33428": "To reset your password: Go to login, click Forgot Password, check your email for reset link",
+        "f6a575e1": "View invoices at Account -> Billing. Update payment method in Account -> Payment Methods",
+        "246c871d": "Check status at status.techflow.com. Verify your API key is active. Review error logs in dashboard",
+        "ff535fa3": "Go to Dashboard -> Integrations. Select your platform, authorize, configure webhooks, then test",
+        "5895b67b": "Starter: $9/mo with 10k API calls. Pro: $49/mo with 100k calls. Enterprise: Custom pricing with unlimited calls"
+      },
+      "trie": {
+        "p": {
+          "a": {
+            "s": {
+              "s": {
+                "w": {
+                  "o": {
+                    "r": {
+                      "d": {
+                        "_intent": "d2c33428"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "y": {
+              "m": {
+                "e": {
+                  "n": {
+                    "t": {
+                      "_intent": "f6a575e1"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "r": {
+            "i": {
+              "c": {
+                "i": {
+                  "n": {
+                    "g": {
+                      "_intent": "5895b67b"
+                    }
+                  }
+                },
+                "e": {
+                  "_intent": "5895b67b"
+                }
+              }
+            }
+          },
+          "l": {
+            "a": {
+              "n": {
+                "_intent": "5895b67b"
+              }
+            }
+          }
+        },
+        "r": {
+          "e": {
+            "s": {
+              "e": {
+                "t": {
+                  "_intent": "d2c33428"
+                }
+              }
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "n": {
+                "g": {
+                  "e": {
+                    "_intent": "d2c33428"
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "n": {
+              "n": {
+                "e": {
+                  "c": {
+                    "t": {
+                      "_intent": "ff535fa3"
+                    }
+                  }
+                }
+              },
+              "f": {
+                "i": {
+                  "g": {
+                    "u": {
+                      "r": {
+                        "e": {
+                          "_intent": "ff535fa3"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "s": {
+              "t": {
+                "_intent": "5895b67b"
+              }
+            }
+          }
+        },
+        "f": {
+          "o": {
+            "r": {
+              "g": {
+                "o": {
+                  "t": {
+                    "_intent": "d2c33428"
+                  }
+                }
+              }
+            }
+          },
+          "a": {
+            "i": {
+              "l": {
+                "e": {
+                  "d": {
+                    "_intent": "246c871d"
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "a": {
+              "t": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "_intent": "5895b67b"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "l": {
+          "o": {
+            "g": {
+              "i": {
+                "n": {
+                  "_intent": "d2c33428"
+                }
+              }
+            }
+          }
+        },
+        "b": {
+          "i": {
+            "l": {
+              "l": {
+                "_intent": "f6a575e1"
+              }
+            }
+          },
+          "r": {
+            "o": {
+              "k": {
+                "e": {
+                  "n": {
+                    "_intent": "246c871d"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "i": {
+          "n": {
+            "v": {
+              "o": {
+                "i": {
+                  "c": {
+                    "e": {
+                      "_intent": "f6a575e1"
+                    }
+                  }
+                }
+              }
+            },
+            "s": {
+              "t": {
+                "a": {
+                  "l": {
+                    "l": {
+                      "_intent": "ff535fa3"
+                    }
+                  }
+                }
+              }
+            },
+            "t": {
+              "e": {
+                "g": {
+                  "r": {
+                    "a": {
+                      "t": {
+                        "e": {
+                          "_intent": "ff535fa3"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "s": {
+            "s": {
+              "u": {
+                "e": {
+                  "_intent": "246c871d"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "u": {
+            "b": {
+              "s": {
+                "c": {
+                  "r": {
+                    "i": {
+                      "p": {
+                        "t": {
+                          "i": {
+                            "o": {
+                              "n": {
+                                "_intent": "f6a575e1"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "e": {
+            "t": {
+              "u": {
+                "p": {
+                  "_intent": "ff535fa3"
+                }
+              }
+            }
+          }
+        },
+        "e": {
+          "r": {
+            "r": {
+              "o": {
+                "r": {
+                  "_intent": "246c871d"
+                }
+              }
+            }
+          }
+        },
+        "a": {
+          "p": {
+            "i": {
+              "_intent": "246c871d"
+            }
+          }
+        },
+        "u": {
+          "p": {
+            "g": {
+              "r": {
+                "a": {
+                  "d": {
+                    "e": {
+                      "_intent": "5895b67b"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 5,
+        "keyword_count": 25
+      }
+    }
+  },
+  "bot_0e8d5998_mlpids02": {
+    "bot_id": "bot_0e8d5998_mlpids02",
+    "bot_name": "ShoppingBot",
+    "metadata": {
+      "domain": "ecommerce",
+      "tone": "friendly",
+      "created_at": "2026-02-16T18:29:29.474Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to our store. How can I help?",
+    "intents": [
+      {
+        "id": "ec1e827a",
+        "name": "find_products",
+        "keywords": [
+          "search",
+          "find",
+          "product",
+          "item",
+          "clothing"
+        ],
+        "response": "What would you like to find? We have clothes, shoes, and more."
+      },
+      {
+        "id": "29ac5e05",
+        "name": "check_price",
+        "keywords": [
+          "cost",
+          "price",
+          "how",
+          "much",
+          "expensive"
+        ],
+        "response": "Prices vary. Check product pages for details on our website."
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "For more help, visit our store website or contact support",
+    "runtime": {
+      "keyword_index": {
+        "search": [
+          "ec1e827a"
+        ],
+        "find": [
+          "ec1e827a"
+        ],
+        "product": [
+          "ec1e827a"
+        ],
+        "item": [
+          "ec1e827a"
+        ],
+        "clothing": [
+          "ec1e827a"
+        ],
+        "cost": [
+          "29ac5e05"
+        ],
+        "price": [
+          "29ac5e05"
+        ],
+        "how": [
+          "29ac5e05"
+        ],
+        "much": [
+          "29ac5e05"
+        ],
+        "expensive": [
+          "29ac5e05"
+        ]
+      },
+      "response_map": {
+        "ec1e827a": "What would you like to find? We have clothes, shoes, and more.",
+        "29ac5e05": "Prices vary. Check product pages for details on our website."
+      },
+      "trie": {
+        "s": {
+          "e": {
+            "a": {
+              "r": {
+                "c": {
+                  "h": {
+                    "_intent": "ec1e827a"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "n": {
+              "d": {
+                "_intent": "ec1e827a"
+              }
+            }
+          }
+        },
+        "p": {
+          "r": {
+            "o": {
+              "d": {
+                "u": {
+                  "c": {
+                    "t": {
+                      "_intent": "ec1e827a"
+                    }
+                  }
+                }
+              }
+            },
+            "i": {
+              "c": {
+                "e": {
+                  "_intent": "29ac5e05"
+                }
+              }
+            }
+          }
+        },
+        "i": {
+          "t": {
+            "e": {
+              "m": {
+                "_intent": "ec1e827a"
+              }
+            }
+          }
+        },
+        "c": {
+          "l": {
+            "o": {
+              "t": {
+                "h": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "ec1e827a"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "s": {
+              "t": {
+                "_intent": "29ac5e05"
+              }
+            }
+          }
+        },
+        "h": {
+          "o": {
+            "w": {
+              "_intent": "29ac5e05"
+            }
+          }
+        },
+        "m": {
+          "u": {
+            "c": {
+              "h": {
+                "_intent": "29ac5e05"
+              }
+            }
+          }
+        },
+        "e": {
+          "x": {
+            "p": {
+              "e": {
+                "n": {
+                  "s": {
+                    "i": {
+                      "v": {
+                        "e": {
+                          "_intent": "29ac5e05"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    }
+  },
+  "bot_3ab081a9_mlv46knx": {
+    "bot_id": "bot_3ab081a9_mlv46knx",
+    "bot_name": "ShoppingBot",
+    "metadata": {
+      "domain": "ecommerce",
+      "tone": "friendly",
+      "created_at": "2026-02-20T16:38:35.805Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to our store. How can I help? What do you want to buy?",
+    "intents": [
+      {
+        "id": "ec1e827a",
+        "name": "find_products",
+        "keywords": [
+          "search",
+          "find",
+          "product",
+          "item",
+          "clothing"
+        ],
+        "response": "What would you like to find? We have clothes, shoes, and more."
+      },
+      {
+        "id": "29ac5e05",
+        "name": "check_price",
+        "keywords": [
+          "cost",
+          "price",
+          "how",
+          "much",
+          "expensive"
+        ],
+        "response": "Prices vary. Check product pages for details on our website."
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "For more help, visit our store website or contact support",
+    "runtime": {
+      "keyword_index": {
+        "search": [
+          "ec1e827a"
+        ],
+        "find": [
+          "ec1e827a"
+        ],
+        "product": [
+          "ec1e827a"
+        ],
+        "item": [
+          "ec1e827a"
+        ],
+        "clothing": [
+          "ec1e827a"
+        ],
+        "cost": [
+          "29ac5e05"
+        ],
+        "price": [
+          "29ac5e05"
+        ],
+        "how": [
+          "29ac5e05"
+        ],
+        "much": [
+          "29ac5e05"
+        ],
+        "expensive": [
+          "29ac5e05"
+        ]
+      },
+      "response_map": {
+        "ec1e827a": "What would you like to find? We have clothes, shoes, and more.",
+        "29ac5e05": "Prices vary. Check product pages for details on our website."
+      },
+      "trie": {
+        "s": {
+          "e": {
+            "a": {
+              "r": {
+                "c": {
+                  "h": {
+                    "_intent": "ec1e827a"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "n": {
+              "d": {
+                "_intent": "ec1e827a"
+              }
+            }
+          }
+        },
+        "p": {
+          "r": {
+            "o": {
+              "d": {
+                "u": {
+                  "c": {
+                    "t": {
+                      "_intent": "ec1e827a"
+                    }
+                  }
+                }
+              }
+            },
+            "i": {
+              "c": {
+                "e": {
+                  "_intent": "29ac5e05"
+                }
+              }
+            }
+          }
+        },
+        "i": {
+          "t": {
+            "e": {
+              "m": {
+                "_intent": "ec1e827a"
+              }
+            }
+          }
+        },
+        "c": {
+          "l": {
+            "o": {
+              "t": {
+                "h": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "ec1e827a"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "o": {
+            "s": {
+              "t": {
+                "_intent": "29ac5e05"
+              }
+            }
+          }
+        },
+        "h": {
+          "o": {
+            "w": {
+              "_intent": "29ac5e05"
+            }
+          }
+        },
+        "m": {
+          "u": {
+            "c": {
+              "h": {
+                "_intent": "29ac5e05"
+              }
+            }
+          }
+        },
+        "e": {
+          "x": {
+            "p": {
+              "e": {
+                "n": {
+                  "s": {
+                    "i": {
+                      "v": {
+                        "e": {
+                          "_intent": "29ac5e05"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    }
+  }
+}
