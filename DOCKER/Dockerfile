@@ -7,6 +7,9 @@ RUN npm ci --only=production || npm install --only=production
 
 COPY . .
 
+RUN ls -R   
+# 👈 IMPORTANT (temporary)
+
 ENV NODE_ENV=production
 
 EXPOSE 5000
