@@ -1,0 +1,3124 @@
+{
+  "bot_69e66277_mnrvh9g8": {
+    "bot_id": "bot_69e66277_mnrvh9g8",
+    "user_id": "anonymous",
+    "bot_name": "FashionStoreBot",
+    "metadata": {
+      "domain": "ecommerce",
+      "tone": "friendly",
+      "created_at": "2026-04-09T19:31:04.088Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to FashionHub!",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status"
+        ],
+        "response": "I can help you track your order!"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I did not understand.",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order!"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 1,
+        "keyword_count": 2
+      }
+    },
+    "created_at": "2026-04-09T19:31:04.088Z",
+    "updated_at": "2026-04-09T19:31:04.088Z"
+  },
+  "bot_96a47779_mnrvhzn9": {
+    "bot_id": "bot_96a47779_mnrvhzn9",
+    "user_id": "anonymous",
+    "bot_name": "GraFestBot",
+    "metadata": {
+      "domain": "saas",
+      "tone": "friendly",
+      "created_at": "2026-04-09T19:31:38.037Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to GraFest support! I'm here to help you explore events and find the perfect program. What are you looking for this year?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'GF-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Merch Size Guide:\r\nT-Shirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nHoodies: S(36-38), M(40-42), L(44-46), XL(48-50)\r\nAccessories: One Size Fits Most\r\nFor detailed sizing, visit: grafest.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Could you please rephrase or choose one of the available options?",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'GF-') and I'll check the status for you.",
+        "5ac99513": "Merch Size Guide:\r\nT-Shirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nHoodies: S(36-38), M(40-42), L(44-46), XL(48-50)\r\nAccessories: One Size Fits Most\r\nFor detailed sizing, visit: grafest.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    },
+    "created_at": "2026-04-09T19:31:38.039Z",
+    "updated_at": "2026-04-09T19:31:38.039Z"
+  },
+  "bot_0283f453_mnrvjh4r": {
+    "bot_id": "bot_0283f453_mnrvjh4r",
+    "user_id": "anonymous",
+    "bot_name": "GraFestBot",
+    "metadata": {
+      "domain": "saas",
+      "tone": "friendly",
+      "created_at": "2026-04-09T19:32:47.355Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to GraFest support! I'm here to help you explore events and find the perfect program. What are you looking for this year?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'GF-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Merch Size Guide:\r\nT-Shirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nHoodies: S(36-38), M(40-42), L(44-46), XL(48-50)\r\nAccessories: One Size Fits Most\r\nFor detailed sizing, visit: grafest.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Could you please rephrase or choose one of the available options?",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'GF-') and I'll check the status for you.",
+        "5ac99513": "Merch Size Guide:\r\nT-Shirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nHoodies: S(36-38), M(40-42), L(44-46), XL(48-50)\r\nAccessories: One Size Fits Most\r\nFor detailed sizing, visit: grafest.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    },
+    "created_at": "2026-04-09T19:32:47.355Z",
+    "updated_at": "2026-04-09T19:32:47.355Z"
+  },
+  "bot_96a30fd8_mnrvjj07": {
+    "bot_id": "bot_96a30fd8_mnrvjj07",
+    "user_id": "anonymous",
+    "bot_name": "FashionStoreBot",
+    "metadata": {
+      "domain": "ecommerce",
+      "tone": "friendly",
+      "created_at": "2026-04-09T19:32:49.783Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to FashionHub! I'm here to help you find the perfect outfit. What are you looking for today?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Please try again.",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you.",
+        "5ac99513": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    },
+    "created_at": "2026-04-09T19:32:49.784Z",
+    "updated_at": "2026-04-09T19:32:49.784Z"
+  },
+  "bot_c2514848_mnrvk96w": {
+    "bot_id": "bot_c2514848_mnrvk96w",
+    "user_id": "anonymous",
+    "bot_name": "FashionStoreBot",
+    "metadata": {
+      "domain": "ecommerce",
+      "tone": "friendly",
+      "created_at": "2026-04-09T19:33:23.720Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to FashionHub! I'm here to help you find the perfect outfit. What are you looking for today?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Please try again.",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you.",
+        "5ac99513": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    },
+    "created_at": "2026-04-09T19:33:23.721Z",
+    "updated_at": "2026-04-09T19:33:23.722Z"
+  },
+  "bot_6fedde0e_mnso0ljf": {
+    "bot_id": "bot_6fedde0e_mnso0ljf",
+    "user_id": "anonymous",
+    "bot_name": "FashionStoreBot",
+    "metadata": {
+      "domain": "ecommerce",
+      "tone": "friendly",
+      "created_at": "2026-04-10T08:49:55.467Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to FashionHub! I'm here to help you find the perfect outfit. What are you looking for today?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Please try again.",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you.",
+        "5ac99513": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    },
+    "created_at": "2026-04-10T08:49:55.469Z",
+    "updated_at": "2026-04-10T08:49:55.469Z"
+  },
+  "bot_a3512dff_mnso0u9g": {
+    "bot_id": "bot_a3512dff_mnso0u9g",
+    "user_id": "anonymous",
+    "bot_name": "FashionStoreBot",
+    "metadata": {
+      "domain": "ecommerce",
+      "tone": "friendly",
+      "created_at": "2026-04-10T08:50:06.772Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to FashionHub! I'm here to help you find the perfect outfit. What are you looking for today?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Please try again.",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you.",
+        "5ac99513": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    },
+    "created_at": "2026-04-10T08:50:06.772Z",
+    "updated_at": "2026-04-10T08:50:06.772Z"
+  },
+  "bot_0692cfaa_mnsoec0v": {
+    "bot_id": "bot_0692cfaa_mnsoec0v",
+    "user_id": "anonymous",
+    "bot_name": "FashionStoreBot",
+    "metadata": {
+      "domain": "ecommerce",
+      "tone": "friendly",
+      "created_at": "2026-04-10T09:00:36.319Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to FashionHub! I'm here to help you find the perfect outfit. What are you looking for today?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Please try again.",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you.",
+        "5ac99513": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    },
+    "created_at": "2026-04-10T09:00:36.322Z",
+    "updated_at": "2026-04-10T09:00:36.322Z"
+  },
+  "bot_1abbebfe_mnsoeq7g": {
+    "bot_id": "bot_1abbebfe_mnsoeq7g",
+    "user_id": "anonymous",
+    "bot_name": "FashionStoreBot",
+    "metadata": {
+      "domain": "ecommerce",
+      "tone": "friendly",
+      "created_at": "2026-04-10T09:00:54.700Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to FashionHub! I'm here to help you find the perfect outfit. What are you looking for today?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Please try again.",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you.",
+        "5ac99513": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    },
+    "created_at": "2026-04-10T09:00:54.700Z",
+    "updated_at": "2026-04-10T09:00:54.700Z"
+  },
+  "bot_7347d42a_mnsoeypg": {
+    "bot_id": "bot_7347d42a_mnsoeypg",
+    "user_id": "anonymous",
+    "bot_name": "GraFestBot",
+    "metadata": {
+      "domain": "saas",
+      "tone": "friendly",
+      "created_at": "2026-04-10T09:01:05.716Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to GraFest support! I'm here to help you explore events and find the perfect program. What are you looking for this year?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'GF-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Merch Size Guide:\r\nT-Shirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nHoodies: S(36-38), M(40-42), L(44-46), XL(48-50)\r\nAccessories: One Size Fits Most\r\nFor detailed sizing, visit: grafest.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Could you please rephrase or choose one of the available options?",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'GF-') and I'll check the status for you.",
+        "5ac99513": "Merch Size Guide:\r\nT-Shirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nHoodies: S(36-38), M(40-42), L(44-46), XL(48-50)\r\nAccessories: One Size Fits Most\r\nFor detailed sizing, visit: grafest.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    },
+    "created_at": "2026-04-10T09:01:05.716Z",
+    "updated_at": "2026-04-10T09:01:05.716Z"
+  },
+  "bot_42819485_mnsovqbz": {
+    "bot_id": "bot_42819485_mnsovqbz",
+    "user_id": "anonymous",
+    "bot_name": "GraFestBot",
+    "metadata": {
+      "domain": "saas",
+      "tone": "friendly",
+      "created_at": "2026-04-10T09:14:08.015Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to GraFest support! I'm here to help you explore events and find the perfect program. What are you looking for this year?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'GF-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Merch Size Guide:\r\nT-Shirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nHoodies: S(36-38), M(40-42), L(44-46), XL(48-50)\r\nAccessories: One Size Fits Most\r\nFor detailed sizing, visit: grafest.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Could you please rephrase or choose one of the available options?",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'GF-') and I'll check the status for you.",
+        "5ac99513": "Merch Size Guide:\r\nT-Shirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nHoodies: S(36-38), M(40-42), L(44-46), XL(48-50)\r\nAccessories: One Size Fits Most\r\nFor detailed sizing, visit: grafest.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    },
+    "created_at": "2026-04-10T09:14:08.015Z",
+    "updated_at": "2026-04-10T09:14:08.015Z"
+  },
+  "bot_e6175f24_mnsp3ijd": {
+    "bot_id": "bot_e6175f24_mnsp3ijd",
+    "user_id": "anonymous",
+    "bot_name": "GraFestBot",
+    "metadata": {
+      "domain": "saas",
+      "tone": "friendly",
+      "created_at": "2026-04-10T09:20:11.161Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to GraFest support! I'm here to help you explore events and find the perfect program. What are you looking for this year?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'GF-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Merch Size Guide:\r\nT-Shirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nHoodies: S(36-38), M(40-42), L(44-46), XL(48-50)\r\nAccessories: One Size Fits Most\r\nFor detailed sizing, visit: grafest.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Could you please rephrase or choose one of the available options?",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'GF-') and I'll check the status for you.",
+        "5ac99513": "Merch Size Guide:\r\nT-Shirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nHoodies: S(36-38), M(40-42), L(44-46), XL(48-50)\r\nAccessories: One Size Fits Most\r\nFor detailed sizing, visit: grafest.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    },
+    "created_at": "2026-04-10T09:20:11.162Z",
+    "updated_at": "2026-04-10T09:20:11.162Z"
+  },
+  "bot_831e6573_mnsp3ucb": {
+    "bot_id": "bot_831e6573_mnsp3ucb",
+    "user_id": "anonymous",
+    "bot_name": "GraFestBot",
+    "metadata": {
+      "domain": "saas",
+      "tone": "friendly",
+      "created_at": "2026-04-10T09:20:26.459Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to GraFest support! I'm here to help you explore events and find the perfect program. What are you looking for this year?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'GF-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Merch Size Guide:\r\nT-Shirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nHoodies: S(36-38), M(40-42), L(44-46), XL(48-50)\r\nAccessories: One Size Fits Most\r\nFor detailed sizing, visit: grafest.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Could you please rephrase or choose one of the available options?",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'GF-') and I'll check the status for you.",
+        "5ac99513": "Merch Size Guide:\r\nT-Shirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nHoodies: S(36-38), M(40-42), L(44-46), XL(48-50)\r\nAccessories: One Size Fits Most\r\nFor detailed sizing, visit: grafest.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    },
+    "created_at": "2026-04-10T09:20:26.459Z",
+    "updated_at": "2026-04-10T09:20:26.459Z"
+  },
+  "bot_660c1afe_mnsp4clo": {
+    "bot_id": "bot_660c1afe_mnsp4clo",
+    "user_id": "anonymous",
+    "bot_name": "FashionStoreBot",
+    "metadata": {
+      "domain": "ecommerce",
+      "tone": "friendly",
+      "created_at": "2026-04-10T09:20:50.124Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to FashionHub! I'm here to help you find the perfect outfit. What are you looking for today?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Please try again.",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'FH-') and I'll check the status for you.",
+        "5ac99513": "Size Guide:\r\nShirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nPants: 28-32 (Small), 33-36 (Medium), 37-40 (Large)\r\nDresses: 0-2 (XS), 4-6 (S), 8-10 (M), 12-14 (L)\r\nFor exact measurements, visit: fashionhub.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    },
+    "created_at": "2026-04-10T09:20:50.125Z",
+    "updated_at": "2026-04-10T09:20:50.125Z"
+  },
+  "bot_3a5dd2fa_mnst0u23": {
+    "bot_id": "bot_3a5dd2fa_mnst0u23",
+    "user_id": "anonymous",
+    "bot_name": "GraFestBot",
+    "metadata": {
+      "domain": "saas",
+      "tone": "friendly",
+      "created_at": "2026-04-10T11:10:04.587Z",
+      "version": "1.0"
+    },
+    "welcome": "Welcome to GraFest support! I'm here to help you explore events and find the perfect program. What are you looking for this year?",
+    "intents": [
+      {
+        "id": "fd7a9310",
+        "name": "check_order",
+        "keywords": [
+          "order",
+          "status",
+          "tracking",
+          "delivery",
+          "shipped"
+        ],
+        "response": "I can help you track your order! Please provide your order number (starts with 'GF-') and I'll check the status for you."
+      },
+      {
+        "id": "5ac99513",
+        "name": "size_guide",
+        "keywords": [
+          "size",
+          "measurements",
+          "fit",
+          "chart",
+          "guide"
+        ],
+        "response": "Merch Size Guide:\r\nT-Shirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nHoodies: S(36-38), M(40-42), L(44-46), XL(48-50)\r\nAccessories: One Size Fits Most\r\nFor detailed sizing, visit: grafest.com/size-guide"
+      }
+    ],
+    "lead_capture": [],
+    "fallback": "I'm sorry, I didn't understand that. Could you please rephrase or choose one of the available options?",
+    "runtime": {
+      "keyword_index": {
+        "order": [
+          "fd7a9310"
+        ],
+        "status": [
+          "fd7a9310"
+        ],
+        "tracking": [
+          "fd7a9310"
+        ],
+        "delivery": [
+          "fd7a9310"
+        ],
+        "shipped": [
+          "fd7a9310"
+        ],
+        "size": [
+          "5ac99513"
+        ],
+        "measurements": [
+          "5ac99513"
+        ],
+        "fit": [
+          "5ac99513"
+        ],
+        "chart": [
+          "5ac99513"
+        ],
+        "guide": [
+          "5ac99513"
+        ]
+      },
+      "response_map": {
+        "fd7a9310": "I can help you track your order! Please provide your order number (starts with 'GF-') and I'll check the status for you.",
+        "5ac99513": "Merch Size Guide:\r\nT-Shirts: S(34-36), M(38-40), L(42-44), XL(46-48)\r\nHoodies: S(36-38), M(40-42), L(44-46), XL(48-50)\r\nAccessories: One Size Fits Most\r\nFor detailed sizing, visit: grafest.com/size-guide"
+      },
+      "trie": {
+        "o": {
+          "r": {
+            "d": {
+              "e": {
+                "r": {
+                  "_intent": "fd7a9310"
+                }
+              }
+            }
+          }
+        },
+        "s": {
+          "t": {
+            "a": {
+              "t": {
+                "u": {
+                  "s": {
+                    "_intent": "fd7a9310"
+                  }
+                }
+              }
+            }
+          },
+          "h": {
+            "i": {
+              "p": {
+                "p": {
+                  "e": {
+                    "d": {
+                      "_intent": "fd7a9310"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "i": {
+            "z": {
+              "e": {
+                "_intent": "5ac99513"
+              }
+            }
+          }
+        },
+        "t": {
+          "r": {
+            "a": {
+              "c": {
+                "k": {
+                  "i": {
+                    "n": {
+                      "g": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "d": {
+          "e": {
+            "l": {
+              "i": {
+                "v": {
+                  "e": {
+                    "r": {
+                      "y": {
+                        "_intent": "fd7a9310"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "m": {
+          "e": {
+            "a": {
+              "s": {
+                "u": {
+                  "r": {
+                    "e": {
+                      "m": {
+                        "e": {
+                          "n": {
+                            "t": {
+                              "s": {
+                                "_intent": "5ac99513"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "f": {
+          "i": {
+            "t": {
+              "_intent": "5ac99513"
+            }
+          }
+        },
+        "c": {
+          "h": {
+            "a": {
+              "r": {
+                "t": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        },
+        "g": {
+          "u": {
+            "i": {
+              "d": {
+                "e": {
+                  "_intent": "5ac99513"
+                }
+              }
+            }
+          }
+        }
+      },
+      "stats": {
+        "intent_count": 2,
+        "keyword_count": 10
+      }
+    },
+    "created_at": "2026-04-10T11:10:04.590Z",
+    "updated_at": "2026-04-10T11:10:04.590Z"
+  }
+}
