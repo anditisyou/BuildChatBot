@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Website - DSL Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { margin-top: 0; }
+        .instructions {
+            background: #e8f4fd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 DSL Chatbot Platform Demo</h1>
+        <p>Test the embeddable chatbot widget</p>
+    </div>
+
+    <div class="content">
+        <h2>Welcome to Our Demo Site</h2>
+        <p>This is a sample website to demonstrate the DSL chatbot platform. The chatbot widget is embedded below.</p>
+
+        <div class="instructions">
+            <h3>📋 How to Test:</h3>
+            <ol>
+                <li>Click the chat button (💬) in the bottom-right corner</li>
+                <li>Try saying "hello" or "hi" to the bot</li>
+                <li>The bot should respond with "Hi there!"</li>
+                <li>Try other messages to see the fallback response</li>
+            </ol>
+        </div>
+
+        <p><strong>Bot ID:</strong> bot_3027c18a_mo14g748</p>
+        <p><strong>Embed Code:</strong></p>
+        <code>&lt;script src="/widget.js" data-bot-id="bot_3027c18a_mo14g748"&gt;&lt;/script&gt;</code>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <script src="http://localhost:5000/widget.js" data-bot-id="bot_3027c18a_mo14g748"></script>
+</body>
+</html>

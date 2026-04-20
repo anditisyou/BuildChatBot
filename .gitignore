@@ -1,2 +1,5 @@
 node_modules/
-.envgit rm -r --cached node_modules
+.env
+# If node_modules was already committed, remove from cache:
+# git rm -r --cached node_modules
+# Add local overrides or editor files below

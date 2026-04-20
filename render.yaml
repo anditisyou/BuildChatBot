@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: dsl-chatbot-platform
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: "npm install"
+    startCommand: "npm start"
+
+# Note: Do NOT include secrets in this file. Configure environment variables
+# such as MONGODB_URI, DB_NAME, JWT_SECRET, and REDIS_URL in the Render
+# dashboard or via the web service settings.

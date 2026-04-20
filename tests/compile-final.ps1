@@ -1,6 +1,6 @@
 # compile-final.ps1 - Simplified working version
 param(
-    [string]$DslFile = "fixed-bot.dsl",
+    [string]$DslFile = "fashion-bot.dsl",
     [string]$ServerUrl = "http://localhost:5000"
 )
 

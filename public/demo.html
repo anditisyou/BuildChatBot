@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatbot Widget Demo</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      background: #f4f7fb;
+      color: #1f2937;
+    }
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 24px 160px;
+    }
+    .hero {
+      background: white;
+      border-radius: 24px;
+      padding: 36px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 2.5rem;
+      line-height: 1.05;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.75;
+      margin: 16px 0;
+      max-width: 720px;
+    }
+    .steps {
+      margin-top: 32px;
+      padding: 24px;
+      background: #eef2ff;
+      border-radius: 18px;
+      border: 1px solid #dbeafe;
+    }
+    .steps ol {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .steps li {
+      margin: 12px 0;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .code {
+      display: block;
+      padding: 18px;
+      margin: 20px 0;
+      background: #111827;
+      color: #f8fafc;
+      border-radius: 12px;
+      overflow-x: auto;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .note {
+      margin-top: 24px;
+      padding: 18px;
+      border-left: 4px solid #4f46e5;
+      background: #eef2ff;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <h1>Mock User Website</h1>
+      <p>
+        This page simulates a customer-facing website that embeds your chatbot widget.
+        Use it to verify the widget loads, opens, and sends messages to your backend.
+      </p>
+      <div class="steps">
+        <h2>How to test</h2>
+        <ol>
+          <li>Open this page in your browser: <strong>http://localhost:5000/demo.html</strong></li>
+          <li>Click the chat button in the bottom-right corner</li>
+          <li>Send a message like <code>hello</code> or <code>order status</code></li>
+          <li>Verify the bot responds from <code>/api/chat/:botId</code></li>
+        </ol>
+      </div>
+      <p>
+        The widget is embedded below using the bot ID from a compiled bot. If the bot ID is invalid,
+        replace it with a real bot ID from your compile result or the dashboard.
+      </p>
+      <pre class="code">&lt;script src="/widget.js" data-bot-id="bot_3027c18a_mo14g748"&gt;&lt;/script&gt;</pre>
+      <div class="note">
+        <strong>Note:</strong> If you compile a new bot and receive a different <code>bot_id</code>, update the script tag above to use the new ID.
+      </div>
+    </div>
+  </div>
+
+  <script src="/widget.js" data-bot-id="bot_e1e32b47_mo156n1g"></script>
+</body>
+</html>
