@@ -302,6 +302,10 @@ For production:
 4. Add tests
 5. Submit a pull request
 
+## Author
+
+Vaishnavi Khandelwal
+
 ## 📄 License
 
 MIT License - see LICENSE file for details.
