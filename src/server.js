@@ -23,7 +23,10 @@ app.use((req, res, next) => {
 
 // Security and performance
 const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : ['*'];
-app.use(helmet());
+// Configure helmet but allow cross-origin resource sharing for static widget files
+app.use(helmet({
+  crossOriginResourcePolicy: { policy: 'cross-origin' }
+}));
 app.use(compression());
 
 // CORS configuration: allow specific origins or all when not set
