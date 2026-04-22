@@ -1,6 +1,8 @@
 // server.js - UPDATED
 const express = require('express');
 const cors = require('cors');
+const helmet = require('helmet');
+const compression = require('compression');
 const path = require('path');
 const apiRoutes = require('./api/routes');
 const BotRepository = require('./storage/mongodb.repository');
@@ -19,8 +21,34 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(cors());
+// Security and performance
+const allowedOrigins = process.env.ALLOWED_ORIGINS ? process.env.ALLOWED_ORIGINS.split(',') : ['*'];
+app.use(helmet());
+app.use(compression());
+
+// CORS configuration: allow specific origins or all when not set
+const corsOptions = {
+  origin: function(origin, callback) {
+    if (!origin) return callback(null, true); // allow non-browser clients or same-origin
+    if (allowedOrigins.includes('*') || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error('Not allowed by CORS'));
+  },
+  methods: ['GET','POST','OPTIONS','DELETE'],
+  allowedHeaders: ['Content-Type','Authorization'],
+  optionsSuccessStatus: 204
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 app.use(express.json({ limit: '1mb' }));
+
+// Simple request logger for production debugging
+app.use((req, res, next) => {
+  console.log(`${new Date().toISOString()} ${req.ip} ${req.method} ${req.originalUrl}`);
+  next();
+});
 
 // Static files
 app.use(express.static(path.join(__dirname, '../public')));
