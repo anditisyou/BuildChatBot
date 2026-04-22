@@ -1,579 +1,735 @@
 <!DOCTYPE html>
-<script src="/app.js" defer></script>
-    resize: vertical;
-    padding: 1.15rem 1.25rem;
-    outline: none;
-    tab-size: 2;
-  }
-  .code-editor::selection {
-    background: rgba(96, 165, 250, 0.3);
-  }
-  .code-editor:focus {
-    box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.18);
-  }
-  .output-content {
-    padding: 1.15rem 1.25rem;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.9rem;
-    background: linear-gradient(180deg, #050814, #05060b);
-    min-height: 260px;
-    white-space: pre-wrap;
-    word-break: break-word;
-    color: #dbeafe;
-    border-bottom: 1px solid var(--border);
-  }
-  .btn {
-    border: 1px solid transparent;
-    padding: 0.72rem 1rem;
-    font-size: 0.85rem;
-    font-weight: 600;
-    font-family: 'Inter', sans-serif;
-    color: white;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.55rem;
-    letter-spacing: 0.01em;
-  }
-  .btn:hover {
-    transform: translateY(-1px);
-  }
-  .btn:active {
-    transform: translateY(0);
-  }
-  .btn-primary {
-    background: linear-gradient(135deg, #2563eb, #7c3aed);
-    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
-  }
-  .btn-primary:hover {
-    filter: brightness(1.05);
-  }
-  .btn-secondary {
-    background: rgba(15, 23, 42, 0.9);
-    border-color: rgba(148, 163, 184, 0.16);
-    color: #e2e8f0;
-  }
-  .btn-secondary:hover {
-    background: rgba(30, 41, 59, 0.96);
-    border-color: rgba(96, 165, 250, 0.22);
-  }
-  .btn-sm {
-    padding: 0.55rem 0.85rem;
-    font-size: 0.8rem;
-    border-radius: 10px;
-  }
-  .button-group {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-  .bot-card {
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(2, 6, 23, 0.96));
-    border: 1px solid rgba(96, 165, 250, 0.16);
-    border-radius: 18px;
-    margin-top: 1rem;
-    padding: 1rem;
-  }
-  .bot-card-header {
-    font-weight: 700;
-    font-size: 0.86rem;
-    margin-bottom: 0.85rem;
-    color: #93c5fd;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .code-block {
-    background: rgba(2, 6, 23, 0.92);
-    padding: 0.85rem 0.9rem;
-    border-radius: 14px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem;
-    border: 1px solid rgba(148, 163, 184, 0.12);
-    word-break: break-all;
-    white-space: pre-wrap;
-    margin-top: 0.45rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-  .copy-btn {
-    background: rgba(96, 165, 250, 0.12);
-    border: 1px solid rgba(96, 165, 250, 0.18);
-    padding: 0.35rem 0.7rem;
-    font-size: 0.72rem;
-    border-radius: 10px;
-    cursor: pointer;
-    color: #dbeafe;
-    font-family: inherit;
-  }
-  .copy-btn:hover {
-    background: rgba(96, 165, 250, 0.2);
-  }
-  .status-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    padding: 0.95rem 1.2rem;
-    font-size: 0.75rem;
-    color: var(--muted);
-  }
-  .steps-section {
-    margin: 24px 0;
-  }
-  .steps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-  }
-  .step-item {
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    padding: 1rem;
-    box-shadow: var(--shadow);
-  }
-  .step-number {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: #93c5fd;
-    margin-bottom: 0.6rem;
-  }
-  .step-title {
-    font-weight: 700;
-    font-size: 0.95rem;
-    margin-bottom: 0.25rem;
-  }
-  .step-desc {
-    font-size: 0.82rem;
-    color: var(--muted);
-  }
-  .demo-chat-panel {
-    background: rgba(15, 23, 42, 0.72);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-xl);
-    padding: 1rem;
-    box-shadow: var(--shadow);
-    backdrop-filter: blur(16px);
-  }
-  .chat-row {
-    display: flex;
-    gap: 0.75rem;
-    margin-top: 0.85rem;
-  }
-  .chat-input {
-    flex: 1;
-    background: rgba(2, 6, 23, 0.92);
-    border: 1px solid rgba(148, 163, 184, 0.16);
-    border-radius: 999px;
-    padding: 0.75rem 1rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.88rem;
-    color: #e5eefc;
-    outline: none;
-  }
-  .chat-input:focus {
-    border-color: rgba(96, 165, 250, 0.32);
-    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.08);
-  }
-  .message-bubble {
-    font-size: 0.88rem;
-    padding: 0.75rem 0.95rem;
-    border-radius: 16px;
-    max-width: 85%;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.45;
-  }
-  .bot-msg {
-    background: rgba(30, 41, 59, 0.88);
-    border: 1px solid rgba(96, 165, 250, 0.14);
-    align-self: flex-start;
-  }
-  .user-msg {
-    background: rgba(37, 99, 235, 0.18);
-    border: 1px solid rgba(37, 99, 235, 0.22);
-    align-self: flex-end;
-  }
-  hr {
-    border-color: var(--border);
-  }
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  footer {
-    margin-top: 28px;
-    text-align: center;
-    border-top: 1px solid var(--border);
-    padding-top: 1.4rem;
-    font-size: 0.78rem;
-    color: var(--muted);
-  }
-  button:active {
-    transform: scale(0.98);
-  }
-  .hidden {
-    display: none;
-  }
-  .inline-code {
-    font-family: 'JetBrains Mono', monospace;
-    background: rgba(2, 6, 23, 0.95);
-    padding: 0.18rem 0.45rem;
-    border-radius: 8px;
-    font-size: 0.82rem;
-    border: 1px solid rgba(148, 163, 184, 0.12);
-  }
-  @media (max-width: 900px) {
-    .two-columns {
-      grid-template-columns: 1fr;
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChintuBot DSL Playground</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="/app.js" defer></script>
+  <style>
+    :root {
+      --bg: #0a0a0f;
+      --panel: #111827;
+      --panel-strong: #0f172a;
+      --panel-soft: #0d1320;
+      --border: #1f2937;
+      --border-strong: #273244;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --subtle: #6b7280;
+      --accent: #ff5a2c;
+      --accent-soft: rgba(255, 90, 44, 0.14);
+      --success: #22c55e;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(255, 90, 44, 0.08), transparent 28%),
+        linear-gradient(180deg, #0a0a0f 0%, #08090d 100%);
+      color: var(--text);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 48px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 10px 0 22px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), #ff7a52);
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .brand-copy strong {
+      font-size: 0.98rem;
+      font-weight: 700;
+    }
+
+    .brand-copy span {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .topnav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-link {
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 9px 12px;
+      border-radius: 10px;
+      transition: background 0.18s ease, color 0.18s ease;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 64px 0 44px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.03em;
+    }
+
+    .hero h1 {
+      margin: 20px auto 14px;
+      max-width: 760px;
+      font-size: clamp(2.7rem, 8vw, 4.6rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      font-weight: 800;
+    }
+
+    .hero h1 .accent {
+      color: var(--accent);
+    }
+
+    .hero p {
+      margin: 0 auto;
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      margin-top: 28px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary,
+    .btn-secondary,
+    .btn-ghost {
+      border-radius: 12px;
+      border: 1px solid transparent;
+      padding: 11px 18px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.16s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .btn-ghost:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 14px 32px rgba(255, 90, 44, 0.18);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.7;
+      cursor: progress;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--border-strong);
+    }
+
+    .btn-secondary:hover,
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--muted);
+      border-color: var(--border);
+      padding: 9px 14px;
+      font-size: 0.85rem;
+    }
+
+    .playground {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: 20px;
+      align-items: start;
+      scroll-margin-top: 24px;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(17, 24, 39, 0.98), rgba(13, 19, 32, 0.98));
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .panel-title {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .panel-title strong {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .panel-title span {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .editor-shell {
+      padding: 0;
+    }
+
     .code-editor {
-      min-height: 420px;
-    }
-    .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .chat-row {
-      flex-direction: column;
-    }
-    .btn {
+      display: block;
       width: 100%;
+      min-height: 460px;
+      resize: vertical;
+      border: 0;
+      outline: 0;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0)),
+        #0b1120;
+      color: var(--text);
+      padding: 22px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.92rem;
+      line-height: 1.75;
+      tab-size: 2;
     }
-  }
-  @media (max-width: 560px) {
-    .app-container {
-      padding: 16px;
+
+    .code-editor::selection {
+      background: rgba(255, 90, 44, 0.26);
     }
-    .panel-header,
-    .status-bar {
-      padding-left: 0.95rem;
-      padding-right: 0.95rem;
+
+    .panel-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      border-top: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.02);
     }
-    .code-editor,
-    .output-content {
-      padding: 1rem;
+
+    .hint-row {
+      color: var(--subtle);
+      font-size: 0.77rem;
+      font-family: 'JetBrains Mono', monospace;
     }
-  }
-</style>
+
+    .output-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 18px;
+    }
+
+    .output-box,
+    .info-card,
+    .chat-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: rgba(7, 11, 19, 0.76);
+    }
+
+    .output-box {
+      min-height: 216px;
+      padding: 18px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: #cbd5e1;
+    }
+
+    .output-box.ready {
+      color: var(--muted);
+    }
+
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.8rem;
+      padding: 0 2px;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--success);
+      box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.12);
+    }
+
+    .info-card {
+      padding: 18px;
+    }
+
+    .info-card.hidden {
+      display: none;
+    }
+
+    .info-label {
+      color: var(--subtle);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .info-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.92rem;
+      color: var(--text);
+      margin-bottom: 16px;
+      word-break: break-all;
+    }
+
+    .code-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 12px;
+      border-radius: 14px;
+      border: 1px solid var(--border-strong);
+      background: rgba(0, 0, 0, 0.22);
+    }
+
+    .code-block code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.76rem;
+      color: #d1d5db;
+      word-break: break-all;
+    }
+
+    .copy-btn {
+      border: 1px solid var(--border-strong);
+      background: rgba(255, 90, 44, 0.08);
+      color: var(--text);
+      border-radius: 10px;
+      padding: 8px 12px;
+      font-size: 0.76rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .copy-btn:hover {
+      background: rgba(255, 90, 44, 0.14);
+    }
+
+    .chat-card {
+      padding: 18px;
+    }
+
+    .chat-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .chat-head strong {
+      font-size: 0.92rem;
+    }
+
+    .chat-head span {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .chat-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .message {
+      max-width: 92%;
+      padding: 12px 14px;
+      border-radius: 16px;
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    .message.bot {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      color: #d1d5db;
+    }
+
+    .message.user {
+      align-self: flex-end;
+      background: var(--accent-soft);
+      border: 1px solid rgba(255, 90, 44, 0.2);
+      color: #f3f4f6;
+    }
+
+    .chat-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+    }
+
+    .chat-input {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--border-strong);
+      background: #0b1120;
+      color: var(--text);
+      padding: 12px 14px;
+      outline: none;
+    }
+
+    .chat-input:focus {
+      border-color: rgba(255, 90, 44, 0.5);
+      box-shadow: 0 0 0 4px rgba(255, 90, 44, 0.08);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 26px;
+    }
+
+    .step {
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .step strong {
+      display: block;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .step h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 32px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: center;
+      color: var(--subtle);
+      font-size: 0.84rem;
+    }
+
+    @media (max-width: 980px) {
+      .playground {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 24px, 1180px);
+      }
+
+      .topbar,
+      .panel-head,
+      .panel-foot,
+      .chat-head,
+      .status-row {
+        align-items: flex-start;
+      }
+
+      .topbar,
+      .panel-head,
+      .panel-foot {
+        flex-direction: column;
+      }
+
+      .hero {
+        padding-top: 40px;
+      }
+
+      .hero-actions,
+      .topnav,
+      .chat-row {
+        width: 100%;
+      }
+
+      .hero-actions > *,
+      .topnav > *,
+      .chat-row > * {
+        width: 100%;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="app-container">
-  <!-- Simple navbar, no emoji overload, just clean dev tool identity -->
-  <div class="navbar">
-    <div class="logo-area">
-      <span class="logo">ChintuBot</span>
-      <span class="logo-badge">DSL Playground</span>
-      <span class="text-muted" style="font-size: 0.8rem;">Build AI chatbots with plain text</span>
-    </div>
-    <div class="nav-links">
-      <a href="#" class="nav-link">Docs</a>
-      <a href="#" class="nav-link">GitHub</a>
-      <a href="#" class="nav-link">Examples</a>
-    </div>
-  </div>
-
-  <!-- 2-COLUMN CORE: Editor + Output -->
-  <div class="two-columns">
-    <!-- LEFT: DSL Editor -->
-    <div class="panel">
-      <div class="panel-header">
-        <span class="panel-title">📄 dsl / bot.chintu</span>
-        <div class="button-group">
-          <button id="reset-example" class="btn btn-secondary btn-sm">reset example</button>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">CB</div>
+        <div class="brand-copy">
+          <strong>ChintuBot</strong>
+          <span>Plain-text DSL playground for chatbot builders</span>
         </div>
       </div>
-      <textarea id="dsl-editor" class="code-editor" rows="14" spellcheck="false">bot AdmissionsBot
+
+      <nav class="topnav" aria-label="Primary">
+        <a class="nav-link" href="#playground">Playground</a>
+        <a class="nav-link" href="#steps">How it works</a>
+        <a class="nav-link" href="#" id="docs-trigger">Docs</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">Minimal developer tooling UI</div>
+      <h1>Build chatbots with a <span class="accent">clean DSL workflow</span></h1>
+      <p>
+        Write intents in plain text, compile them into a bot, test the response flow,
+        and copy the embed snippet when it is ready to ship.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn-primary" href="#playground">Open Playground</a>
+        <a class="btn-secondary" href="#steps">View Flow</a>
+      </div>
+    </section>
+
+    <section class="playground" id="playground">
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">
+            <strong>DSL Editor</strong>
+            <span>`bot`, `intent`, `keywords`, `response`, `fallback`</span>
+          </div>
+          <button id="reset-example" class="btn-ghost" type="button">Reset Example</button>
+        </div>
+
+        <div class="editor-shell">
+          <textarea id="dsl-editor" class="code-editor" rows="16" spellcheck="false">bot AdmissionsBot
 domain education
 tone witty
 
-welcome "Namaste 🙏 Mai Chintu hoon, pooch kya chahiye?"
+welcome "Namaste. Mai Chintu hoon. Pooch kya chahiye."
 
 intent fees
 keywords: fee tuition kitna paisa
-response "Simple hai bhai, 1.2 lakh 😎 full semester ka. EMI bhi hai, tension mat le!"
+response "Simple hai bhai, 1.2 lakh full semester ka. EMI bhi hai."
 
 intent courses
 keywords: course program degree btech mba
-response "BCA, B.Tech CSE, MBA — sab hai. Zara website check kar ya mujhse puchh!"
+response "BCA, B.Tech CSE, MBA sab available hain. Specific option bol, detail de deta hoon."
 
-fallback "Arre, Chintu samjha nahi 😅 Fir se likh, ya contact admin kar!"</textarea>
-      <div class="panel-header" style="border-top: 1px solid #2a2a2a; border-bottom: none; justify-content: space-between;">
-        <div class="text-muted" style="font-size: 0.7rem;">intent · keywords · fallback</div>
-        <button id="run-compile" class="btn btn-primary">▶ Run</button>
-      </div>
-    </div>
+fallback "Samjha nahi. Dobara likh ya ek clear keyword use kar."</textarea>
+        </div>
 
-    <!-- RIGHT: Output + Bot generation -->
-    <div class="panel">
-      <div class="panel-header">
-        <span class="panel-title">📋 output / compiler</span>
-        <span class="text-muted" style="font-size: 0.7rem;">status</span>
+        <div class="panel-foot">
+          <div class="hint-row">Plain text in. Bot config out.</div>
+          <button id="run-compile" class="btn-primary" type="button">Run</button>
+        </div>
       </div>
-      <div id="output-area" class="output-content">
-        💤 Ready. Write DSL and click "Run".
-      </div>
-      
-      <!-- Bot success card (hidden initially) -->
-      <div id="bot-success-card" class="hidden" style="margin: 0 1rem 1rem 1rem;">
-        <div class="bot-card">
-          <div class="bot-card-header">✓ bot generated</div>
-          <div style="margin-bottom: 0.75rem;">
-            <div class="text-muted" style="font-size: 0.7rem; margin-bottom: 0.2rem;">Bot ID</div>
-            <code id="bot-id-display" class="inline-code" style="background:#0a0a0a; display: inline-block;">bot_xxxxxxxx</code>
+
+      <div class="panel">
+        <div class="panel-head">
+          <div class="panel-title">
+            <strong>Compiler Output</strong>
+            <span>Validation, bot ID, and deploy-ready embed code</span>
           </div>
-          <div>
-            <div class="text-muted" style="font-size: 0.7rem; margin-bottom: 0.2rem;">embed snippet</div>
+        </div>
+
+        <div class="output-stack">
+          <div id="output-area" class="output-box ready">Ready. Write DSL and click Run.</div>
+
+          <div class="status-row">
+            <div class="status-pill">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>DSL compiler online</span>
+            </div>
+            <span id="compile-timestamp">ready</span>
+          </div>
+
+          <div id="bot-success-card" class="info-card hidden">
+            <div class="info-label">Bot ID</div>
+            <div id="bot-id-display" class="info-value">bot_xxxxxxxx</div>
+
+            <div class="info-label">Embed Snippet</div>
             <div class="code-block">
-              <code id="embed-code-text" style="font-family: monospace; font-size: 0.7rem; word-break: break-all;">&lt;script src="https://cdn.chintubot.ai/widget.js" data-bot-id="..."&gt;&lt;/script&gt;</code>
-              <button id="copy-embed-btn" class="copy-btn">copy</button>
+              <code id="embed-code-text">&lt;script src="https://cdn.chintubot.ai/widget.js" data-bot-id="..."&gt;&lt;/script&gt;</code>
+              <button id="copy-embed-btn" class="copy-btn" type="button">Copy</button>
             </div>
           </div>
-          <div class="text-muted" style="font-size: 0.7rem; margin-top: 0.6rem;">→ embed this script into your site</div>
+
+          <div class="chat-card">
+            <div class="chat-head">
+              <strong>Bot Preview</strong>
+              <span>Use the compiled bot when available</span>
+            </div>
+
+            <div class="chat-feed">
+              <div class="message bot"><span id="demo-bot-message">Ready when you are. Ask about fees, courses, or anything from the sample DSL.</span></div>
+              <div class="message user"><span id="demo-user-message">What is the fee?</span></div>
+            </div>
+
+            <div class="chat-row">
+              <input id="demo-chat-input" class="chat-input" type="text" placeholder="Ask the bot something">
+              <button id="demo-chat-send" class="btn-secondary" type="button">Send</button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="status-bar">
-        <span>⚡ DSL compiler · static analysis</span>
-        <span id="compile-timestamp" class="text-muted">ready</span>
+    </section>
+
+    <section class="steps" id="steps">
+      <div class="step">
+        <strong>01</strong>
+        <h3>Write DSL</h3>
+        <p>Describe the bot with intents, keywords, welcome text, and fallback rules.</p>
       </div>
-    </div>
-  </div>
-
-  <!-- SIMPLE STEPS (no overkill) -->
-  <div class="steps-section">
-    <div class="steps-grid">
-      <div class="step-item"><div class="step-number">01</div><div class="step-title">write DSL</div><div class="step-desc">intents, keywords, fallback</div></div>
-      <div class="step-item"><div class="step-number">02</div><div class="step-title">run</div><div class="step-desc">compile & validate</div></div>
-      <div class="step-item"><div class="step-number">03</div><div class="step-title">copy embed</div><div class="step-desc">bot id + snippet</div></div>
-      <div class="step-item"><div class="step-number">04</div><div class="step-title">deploy</div><div class="step-desc">paste on any site</div></div>
-    </div>
-  </div>
-
-  <!-- DEMO CHAT (functional preview) but no glitter, minimal -->
-  <div class="demo-chat-panel">
-    <div style="display: flex; justify-content: space-between; margin-bottom: 0.75rem;">
-      <span style="font-weight: 500; font-size: 0.85rem;">test drive · chintu simulator</span>
-      <span class="text-muted" style="font-size: 0.7rem;">demo interaction</span>
-    </div>
-    <div style="display: flex; flex-direction: column; gap: 0.65rem;">
-      <div class="message-bubble bot-msg" style="max-width: 90%;">
-        🤖 <span id="demo-bot-message">Simple hai bhai, 1.2 lakh 😎</span>
+      <div class="step">
+        <strong>02</strong>
+        <h3>Run Compiler</h3>
+        <p>Send the draft to the backend and validate the structure in one click.</p>
       </div>
-      <div class="message-bubble user-msg" style="max-width: 90%; align-self: flex-end;">
-        👤 <span id="demo-user-message">What is fee?</span>
+      <div class="step">
+        <strong>03</strong>
+        <h3>Copy Embed</h3>
+        <p>Use the generated bot ID and script snippet to drop the widget into any page.</p>
       </div>
-    </div>
-    <div class="chat-row">
-      <input type="text" id="demo-chat-input" placeholder="ask something..." class="chat-input">
-      <button id="demo-chat-send" class="btn btn-secondary btn-sm" style="border-radius: 30px;">send</button>
-    </div>
-    <div class="text-muted" style="font-size: 0.65rem; margin-top: 0.7rem;">* playful simulation — your compiled bot will behave similarly</div>
+      <div class="step">
+        <strong>04</strong>
+        <h3>Deploy</h3>
+        <p>Test with the preview pane, then move the compiled bot into your real site flow.</p>
+      </div>
+    </section>
+
+    <footer>ChintuBot | DSL Playground</footer>
   </div>
-
-  <footer>
-    <span>chintu/bot — DSL playground · build custom chatbots with plain text</span>
-  </footer>
-</div>
-
-<script>
-  (function() {
-    // ---------- DOM elements ----------
-    const dslEditor = document.getElementById('dsl-editor');
-    const runBtn = document.getElementById('run-compile');
-    const outputArea = document.getElementById('output-area');
-    const botSuccessCard = document.getElementById('bot-success-card');
-    const botIdSpan = document.getElementById('bot-id-display');
-    const embedCodeSpan = document.getElementById('embed-code-text');
-    const copyBtn = document.getElementById('copy-embed-btn');
-    const resetExampleBtn = document.getElementById('reset-example');
-    const demoInput = document.getElementById('demo-chat-input');
-    const demoSend = document.getElementById('demo-chat-send');
-    const demoBotMsgSpan = document.getElementById('demo-bot-message');
-    const demoUserMsgSpan = document.getElementById('demo-user-message');
-    const compileTimestamp = document.getElementById('compile-timestamp');
-
-    let currentBotId = null;
-
-    function setTimestamp() {
-      if (compileTimestamp) {
-        const now = new Date();
-        compileTimestamp.innerText = `last run ${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}:${now.getSeconds().toString().padStart(2,'0')}`;
-      }
-    }
-
-    async function runCompilation() {
-      const dsl = dslEditor.value.trim();
-      if (!dsl) {
-        outputArea.innerText = `⛔ compilation failed: DSL cannot be empty. Write some intents.`;
-        botSuccessCard.classList.add('hidden');
-        currentBotId = null;
-        setTimestamp();
-        return;
-      }
-
-      runBtn.disabled = true;
-      const originalBtnText = runBtn.innerText;
-      runBtn.innerText = 'compiling...';
-      outputArea.innerText = `⚙️ sending DSL to backend...`;
-      botSuccessCard.classList.add('hidden');
-      currentBotId = null;
-
-      try {
-        const response = await fetch('/api/compile', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ dsl })
-        });
-
-        const data = await response.json();
-        if (!response.ok || !data.success) {
-          throw new Error(data.error || `Server error ${response.status}`);
-        }
-
-        currentBotId = data.bot_id;
-        outputArea.innerText = `✓ compilation successful\n` +
-          `──────────────────────────────\n` +
-          `bot id        : ${data.bot_id}\n` +
-          `intents       : ${data.stats.intents}\n` +
-          `keywords      : ${data.stats.keywords}\n` +
-          `tokens        : ${data.stats.tokens}\n` +
-          `──────────────────────────────\n` +
-          `embed code ready below.`;
-
-        botIdSpan.innerText = data.bot_id;
-        const origin = window.location.origin;
-        const defaultEmbed = `<script src="${origin}/widget.js" data-bot-id="${data.bot_id}"><\/script>`;
-        embedCodeSpan.innerText = data.embed_script
-          ? data.embed_script.replace(/src="\/widget\.js"/, `src="${origin}/widget.js"`)
-          : defaultEmbed;
-        botSuccessCard.classList.remove('hidden');
-      } catch (err) {
-        outputArea.innerText = `⛔ compilation failed: ${err.message}`;
-        botSuccessCard.classList.add('hidden');
-        currentBotId = null;
-      } finally {
-        runBtn.disabled = false;
-        runBtn.innerText = originalBtnText;
-        setTimestamp();
-      }
-    }
-
-    copyBtn.addEventListener('click', async () => {
-      const code = embedCodeSpan.innerText;
-      try {
-        await navigator.clipboard.writeText(code);
-        const original = copyBtn.innerText;
-        copyBtn.innerText = 'copied!';
-        setTimeout(() => { copyBtn.innerText = original; }, 1200);
-      } catch (e) {
-        alert('copy manually: ' + code);
-      }
-    });
-
-    function resetToDemo() {
-      dslEditor.value = `bot AdmissionsBot
-domain education
-tone witty
-
-welcome "Namaste 🙏 Mai Chintu hoon, pooch kya chahiye?"
-
-intent fees
-keywords: fee tuition kitna paisa
-response "Simple hai bhai, 1.2 lakh 😎 full semester ka. EMI bhi hai, tension mat le!"
-
-intent courses
-keywords: course program degree btech mba
-response "BCA, B.Tech CSE, MBA — sab hai. Zara website check kar ya mujhse puchh!"
-
-fallback "Arre, Chintu samjha nahi 😅 Fir se likh, ya contact admin kar!"`;
-      outputArea.innerText = '💤 Ready. Write DSL and click "Run".';
-      botSuccessCard.classList.add('hidden');
-      currentBotId = null;
-      setTimestamp();
-    }
-
-    async function sendBotMessage(userText) {
-      if (!userText.trim()) return;
-
-      demoUserMsgSpan.innerText = userText;
-      demoInput.value = '';
-
-      if (!currentBotId) {
-        updateDemoChat(userText);
-        return;
-      }
-
-      demoBotMsgSpan.innerText = 'Typing...';
-
-      try {
-        const response = await fetch(`/api/chat/${currentBotId}`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ message: userText })
-        });
-
-        const data = await response.json();
-        if (!response.ok || !data.success) {
-          throw new Error(data.error || `Server error ${response.status}`);
-        }
-        demoBotMsgSpan.innerText = data.response;
-      } catch (err) {
-        demoBotMsgSpan.innerText = 'Sorry, I could not reach the bot backend.';
-        console.error(err);
-      }
-    }
-
-    function updateDemoChat(userText) {
-      const lower = userText.toLowerCase();
-      if (lower.includes('fee') || lower.includes('paise') || lower.includes('kitna')) {
-        demoBotMsgSpan.innerText = 'Simple hai bhai, 1.2 lakh 😎 EMI bhi available hai!';
-      } else if (lower.includes('course') || lower.includes('program')) {
-        demoBotMsgSpan.innerText = 'BCA, B.Tech, MBA, sab kuch hai bhai! Zara website dekh.';
-      } else if (lower.includes('help') || lower.includes('assist')) {
-        demoBotMsgSpan.innerText = 'Main Chintu hoon, DSL likh aur custom bot bana.';
-      } else {
-        demoBotMsgSpan.innerText = 'Arre, DSL likh ke apna bot bana, phir main asli jawab dunga 😜';
-      }
-    }
-
-    demoSend.addEventListener('click', () => {
-      if (demoInput.value.trim()) sendBotMessage(demoInput.value);
-    });
-    demoInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        if (demoInput.value.trim()) sendBotMessage(demoInput.value);
-      }
-    });
-
-    // attach listeners
-    runBtn.addEventListener('click', runCompilation);
-    resetExampleBtn.addEventListener('click', resetToDemo);
-    
-    // initial state: hide bot card, set timestamp
-    botSuccessCard.classList.add('hidden');
-    setTimestamp();
-    
-    // (Optional) Docs trigger just does nothing, no page scroll side-effects
-    const docsTrigger = document.getElementById('docs-trigger');
-    if (docsTrigger) docsTrigger.addEventListener('click', (e) => e.preventDefault());
-    
-    // micro console hint
-    console.log("[chintu/bot] ready · clean mode · dsl playground");
-  })();
-</script>
 </body>
 </html>

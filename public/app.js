@@ -1,6 +1,4 @@
-// app.js - externalized from index.html to satisfy CSP (no inline scripts)
 (function() {
-  // ---------- DOM elements ----------
   const dslEditor = document.getElementById('dsl-editor');
   const runBtn = document.getElementById('run-compile');
   const outputArea = document.getElementById('output-area');
@@ -14,32 +12,68 @@
   const demoBotMsgSpan = document.getElementById('demo-bot-message');
   const demoUserMsgSpan = document.getElementById('demo-user-message');
   const compileTimestamp = document.getElementById('compile-timestamp');
+  const docsTrigger = document.getElementById('docs-trigger');
+
+  const defaultDsl = `bot AdmissionsBot
+domain education
+tone witty
+
+welcome "Namaste. Mai Chintu hoon. Pooch kya chahiye."
+
+intent fees
+keywords: fee tuition kitna paisa
+response "Simple hai bhai, 1.2 lakh full semester ka. EMI bhi hai."
+
+intent courses
+keywords: course program degree btech mba
+response "BCA, B.Tech CSE, MBA sab available hain. Specific option bol, detail de deta hoon."
+
+fallback "Samjha nahi. Dobara likh ya ek clear keyword use kar."`;
 
   let currentBotId = null;
 
-  function setTimestamp() {
-    if (compileTimestamp) {
-      const now = new Date();
-      compileTimestamp.innerText = `last run ${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}:${now.getSeconds().toString().padStart(2,'0')}`;
+  function setTimestamp(label) {
+    if (!compileTimestamp) return;
+
+    if (label) {
+      compileTimestamp.innerText = label;
+      return;
     }
+
+    const now = new Date();
+    const hh = now.getHours().toString().padStart(2, '0');
+    const mm = now.getMinutes().toString().padStart(2, '0');
+    const ss = now.getSeconds().toString().padStart(2, '0');
+    compileTimestamp.innerText = `last run ${hh}:${mm}:${ss}`;
+  }
+
+  function setOutput(message, isReady) {
+    if (!outputArea) return;
+
+    outputArea.innerText = message;
+    outputArea.classList.toggle('ready', Boolean(isReady));
+  }
+
+  function resetBotCard() {
+    currentBotId = null;
+    botSuccessCard.classList.add('hidden');
   }
 
   async function runCompilation() {
     const dsl = dslEditor.value.trim();
     if (!dsl) {
-      outputArea.innerText = `⛔ compilation failed: DSL cannot be empty. Write some intents.`;
-      botSuccessCard.classList.add('hidden');
-      currentBotId = null;
+      setOutput('Compilation failed: DSL cannot be empty. Write some intents first.');
+      resetBotCard();
       setTimestamp();
       return;
     }
 
     runBtn.disabled = true;
     const originalBtnText = runBtn.innerText;
-    runBtn.innerText = 'compiling...';
-    outputArea.innerText = `⚙️ sending DSL to backend...`;
-    botSuccessCard.classList.add('hidden');
-    currentBotId = null;
+    runBtn.innerText = 'Compiling...';
+    setOutput('Sending DSL to backend...');
+    resetBotCard();
+    setTimestamp('running');
 
     try {
       const response = await fetch('/api/compile', {
@@ -56,26 +90,28 @@
       }
 
       currentBotId = data.bot_id;
-      outputArea.innerText = `✓ compilation successful\n` +
-        `──────────────────────────────\n` +
-        `bot id        : ${data.bot_id}\n` +
-        `intents       : ${data.stats.intents}\n` +
-        `keywords      : ${data.stats.keywords}\n` +
-        `tokens        : ${data.stats.tokens}\n` +
-        `──────────────────────────────\n` +
-        `embed code ready below.`;
+      setOutput(
+        `Compilation successful
+--------------------------------
+bot id   : ${data.bot_id}
+intents  : ${data.stats.intents}
+keywords : ${data.stats.keywords}
+tokens   : ${data.stats.tokens}
+--------------------------------
+Embed code is ready below.`
+      );
 
-      botIdSpan.innerText = data.bot_id;
       const origin = window.location.origin;
       const defaultEmbed = `<script src="${origin}/widget.js" data-bot-id="${data.bot_id}"><\/script>`;
+
+      botIdSpan.innerText = data.bot_id;
       embedCodeSpan.innerText = data.embed_script
         ? data.embed_script.replace(/src="\/widget\.js"/, `src="${origin}/widget.js"`)
         : defaultEmbed;
       botSuccessCard.classList.remove('hidden');
     } catch (err) {
-      outputArea.innerText = `⛔ compilation failed: ${err.message}`;
-      botSuccessCard.classList.add('hidden');
-      currentBotId = null;
+      setOutput(`Compilation failed: ${err.message}`);
+      resetBotCard();
     } finally {
       runBtn.disabled = false;
       runBtn.innerText = originalBtnText;
@@ -83,34 +119,60 @@
     }
   }
 
-  copyBtn.addEventListener('click', async () => {
+  async function copyEmbedCode() {
     const code = embedCodeSpan.innerText;
+
     try {
       await navigator.clipboard.writeText(code);
-      const original = copyBtn.innerText;
-      copyBtn.innerText = 'copied!';
-      setTimeout(() => { copyBtn.innerText = original; }, 1200);
-    } catch (e) {
-      alert('copy manually: ' + code);
+      const originalText = copyBtn.innerText;
+      copyBtn.innerText = 'Copied';
+      setTimeout(() => {
+        copyBtn.innerText = originalText;
+      }, 1200);
+    } catch (error) {
+      alert(`Copy manually:\n${code}`);
     }
-  });
+  }
 
   function resetToDemo() {
-    dslEditor.value = `bot AdmissionsBot\ndomain education\ntone witty\n\nwelcome "Namaste 🙏 Mai Chintu hoon, pooch kya chahiye?"\n\nintent fees\nkeywords: fee tuition kitna paisa\nresponse "Simple hai bhai, 1.2 lakh 😎 full semester ka. EMI bhi hai, tension mat le!"\n\nintent courses\nkeywords: course program degree btech mba\nresponse "BCA, B.Tech CSE, MBA — sab hai. Zara website check kar ya mujhse puchh!"\n\nfallback "Arre, Chintu samjha nahi 😅 Fir se likh, ya contact admin kar!"`;
-    outputArea.innerText = '💤 Ready. Write DSL and click "Run".';
-    botSuccessCard.classList.add('hidden');
-    currentBotId = null;
-    setTimestamp();
+    dslEditor.value = defaultDsl;
+    setOutput('Ready. Write DSL and click Run.', true);
+    resetBotCard();
+    demoUserMsgSpan.innerText = 'What is the fee?';
+    demoBotMsgSpan.innerText = 'Ready when you are. Ask about fees, courses, or anything from the sample DSL.';
+    setTimestamp('ready');
+  }
+
+  function updateDemoChat(userText) {
+    const lower = userText.toLowerCase();
+
+    if (lower.includes('fee') || lower.includes('fees') || lower.includes('tuition') || lower.includes('paisa')) {
+      demoBotMsgSpan.innerText = 'Simple hai bhai, 1.2 lakh full semester ka. EMI bhi available hai.';
+      return;
+    }
+
+    if (lower.includes('course') || lower.includes('courses') || lower.includes('program') || lower.includes('degree')) {
+      demoBotMsgSpan.innerText = 'BCA, B.Tech CSE, and MBA sab available hain. Specific course bol, detail de deta hoon.';
+      return;
+    }
+
+    if (lower.includes('hello') || lower.includes('hi') || lower.includes('namaste')) {
+      demoBotMsgSpan.innerText = 'Namaste. Mai Chintu hoon. Pooch kya chahiye.';
+      return;
+    }
+
+    demoBotMsgSpan.innerText = 'Samjha nahi. Dobara likh ya pehle bot compile kar lo for real responses.';
   }
 
   async function sendBotMessage(userText) {
-    if (!userText.trim()) return;
+    const trimmedText = userText.trim();
+    if (!trimmedText) return;
 
-    demoUserMsgSpan.innerText = userText;
+    demoUserMsgSpan.innerText = trimmedText;
     demoInput.value = '';
 
     if (!currentBotId) {
-      updateDemoChat(userText);
+      updateDemoChat(trimmedText);
       return;
     }
 
@@ -122,55 +184,38 @@
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ message: userText })
+        body: JSON.stringify({ message: trimmedText })
       });
 
       const data = await response.json();
       if (!response.ok || !data.success) {
         throw new Error(data.error || `Server error ${response.status}`);
       }
+
       demoBotMsgSpan.innerText = data.response;
-    } catch (err) {
+    } catch (error) {
       demoBotMsgSpan.innerText = 'Sorry, I could not reach the bot backend.';
-      console.error(err);
+      console.error(error);
     }
   }
 
-  function updateDemoChat(userText) {
-    const lower = userText.toLowerCase();
-    if (lower.includes('fee') || lower.includes('paise') || lower.includes('kitna')) {
-      demoBotMsgSpan.innerText = 'Simple hai bhai, 1.2 lakh 😎 EMI bhi available hai!';
-    } else if (lower.includes('course') || lower.includes('program')) {
-      demoBotMsgSpan.innerText = 'BCA, B.Tech, MBA, sab kuch hai bhai! Zara website dekh.';
-    } else if (lower.includes('help') || lower.includes('assist')) {
-      demoBotMsgSpan.innerText = 'Main Chintu hoon, DSL likh aur custom bot bana.';
-    } else {
-      demoBotMsgSpan.innerText = 'Arre, DSL likh ke apna bot bana, phir main asli jawab dunga 😜';
-    }
-  }
-
-  demoSend.addEventListener('click', () => {
-    if (demoInput.value.trim()) sendBotMessage(demoInput.value);
-  });
-  demoInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      if (demoInput.value.trim()) sendBotMessage(demoInput.value);
-    }
-  });
-
-  // attach listeners
+  copyBtn.addEventListener('click', copyEmbedCode);
   runBtn.addEventListener('click', runCompilation);
   resetExampleBtn.addEventListener('click', resetToDemo);
-  
-  // initial state: hide bot card, set timestamp
-  botSuccessCard.classList.add('hidden');
-  setTimestamp();
-  
-  // (Optional) Docs trigger just does nothing, no page scroll side-effects
-  const docsTrigger = document.getElementById('docs-trigger');
-  if (docsTrigger) docsTrigger.addEventListener('click', (e) => e.preventDefault());
-  
-  // micro console hint
-  console.log("[chintu/bot] ready · clean mode · dsl playground");
+  demoSend.addEventListener('click', () => sendBotMessage(demoInput.value));
+  demoInput.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      sendBotMessage(demoInput.value);
+    }
+  });
+
+  if (docsTrigger) {
+    docsTrigger.addEventListener('click', (event) => {
+      event.preventDefault();
+    });
+  }
+
+  resetToDemo();
+  console.log('[chintu/bot] ready | clean playground mode');
 })();
