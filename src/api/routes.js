@@ -12,8 +12,11 @@ router.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
+const rateLimit = require('../middleware/rateLimit');
+
 // PUBLIC
-router.post('/chat/:botId', validateChat, chat);
+// Apply rate limiting to chat endpoint to protect the runtime
+router.post('/chat/:botId', rateLimit, validateChat, chat);
 router.get('/bot/:botId', getBotInfo);
 router.get('/bots', getAllBots);
 
